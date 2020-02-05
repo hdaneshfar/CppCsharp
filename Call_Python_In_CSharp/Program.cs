@@ -35,6 +35,9 @@ namespace Call_Python_In_CSharp
             Console.WriteLine("{0} + {1} = {2}", a, b, res);
             res = calc.sub(a, b);
             Console.WriteLine("{0} - {1} = {2}", a, b, res);
+
+            calc.PrintTest();
+
             Console.WriteLine("Press any key to finish...");
             Console.ReadLine();
 
