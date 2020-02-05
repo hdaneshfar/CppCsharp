@@ -7,7 +7,10 @@ class Program
         //DisplayHelloFromDLL();
         //CreateSerialNumber();
 
-        var sumResult = CustomCalculator.Math.GetSum(1, 5);
+        CustomCalculator.Math.GetFirstNumber();
+        CustomCalculator.Math.GetSecondNumber();
+
+        var sumResult = CustomCalculator.Math.GetSumResult();
         Console.WriteLine("Sum result is : " + sumResult);
         
         var minusResult = CustomCalculator.Math.Minus(81, 5);

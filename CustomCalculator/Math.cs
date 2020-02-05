@@ -19,13 +19,14 @@ namespace CustomCalculator
     public static class Math
     {
         [DllImport("CppTest.dll")]
-        public static extern void DisplayHelloFromDLL();
+        public static extern void GetFirstNumber();
 
         [DllImport("CppTest.dll")]
-        public static extern void CreateSerialNumber();
+        public static extern void GetSecondNumber();
+
 
         [DllImport("CppTest.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "Sum")]
-        public static extern int GetSum(int firstNumber, int secondNumber);
+        public static extern int GetSumResult();
 
         [DllImport("CppTest.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern int Minus(int firstNumber, int secondNumber);
