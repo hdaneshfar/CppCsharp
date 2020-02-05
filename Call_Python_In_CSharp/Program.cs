@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using IronPython.Hosting;
 
+
 namespace Call_Python_In_CSharp
 {
     class Program
@@ -37,6 +38,23 @@ namespace Call_Python_In_CSharp
             Console.WriteLine("{0} - {1} = {2}", a, b, res);
 
             calc.PrintTest();
+
+
+
+            // Get dateTime with Python :
+            calc.CurrentDateTime();
+
+            
+
+
+            // Read file with Python :
+            dynamic pyClass1 = engine.ExecuteFile(@"..\..\FileReader.py");
+            dynamic fileReader = pyClass1.FileReader();
+            fileReader.ReadFile("d:\\test.txt");
+
+
+
+
 
             Console.WriteLine("Press any key to finish...");
             Console.ReadLine();
